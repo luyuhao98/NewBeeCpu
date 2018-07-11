@@ -1,5 +1,5 @@
 Fitter report for nonpipe
-Wed Jul 11 13:57:04 2018
+Wed Jul 11 16:43:26 2018
 Quartus II Version 9.1 Build 222 10/21/2009 SJ Full Version
 
 
@@ -54,7 +54,7 @@ applicable agreement for further details.
 +------------------------------------------------------------------+
 ; Fitter Summary                                                   ;
 +-----------------------+------------------------------------------+
-; Fitter Status         ; Successful - Wed Jul 11 13:57:04 2018    ;
+; Fitter Status         ; Successful - Wed Jul 11 16:43:26 2018    ;
 ; Quartus II Version    ; 9.1 Build 222 10/21/2009 SJ Full Version ;
 ; Revision Name         ; nonpipe                                  ;
 ; Top-level Entity Name ; nonpipe                                  ;
@@ -108,7 +108,7 @@ applicable agreement for further details.
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in C:/Users/Administrator/Desktop/nonpipe/nonpipe.pin.
+The pin-out file can be found in C:/Users/Administrator/Desktop/NewBeeCpu/nonpipe/nonpipe.pin.
 
 
 +-------------------------------------------------------+
@@ -118,7 +118,7 @@ The pin-out file can be found in C:/Users/Administrator/Desktop/nonpipe/nonpipe.
 +-----------------------------------+-------------------+
 ; Logic cells                       ; 30 / 128 ( 23 % ) ;
 ; Registers                         ; 1 / 128 ( < 1 % ) ;
-; Number of pterms used             ; 82                ;
+; Number of pterms used             ; 84                ;
 ; User inserted logic elements      ; 0                 ;
 ; I/O pins                          ; 45 / 68 ( 66 % )  ;
 ;     -- Clock pins                 ; 2 / 2 ( 100 % )   ;
@@ -367,31 +367,31 @@ Note: User assignments will override these defaults. The user specified values a
 ; z        ; 1                    ;
 ; c        ; 1                    ;
 ; drw~13   ; 1                    ;
-; stop~10  ; 1                    ;
+; stop~9   ; 1                    ;
 ; sbus~10  ; 1                    ;
 ; sel~27   ; 1                    ;
+; abus~12  ; 1                    ;
 ; drw~12   ; 1                    ;
+; s~35     ; 1                    ;
+; s~29     ; 1                    ;
+; m~9      ; 1                    ;
 ; mbus~6   ; 1                    ;
 ; memw~9   ; 1                    ;
-; abus~12  ; 1                    ;
-; m~9      ; 1                    ;
-; s~32     ; 1                    ;
-; s~27     ; 1                    ;
+; s~23     ; 1                    ;
 ; sel~23   ; 1                    ;
-; lar~12   ; 1                    ;
-; s~22     ; 1                    ;
+; lar~13   ; 1                    ;
 ; arinc~3  ; 1                    ;
-; s~18     ; 1                    ;
+; s~19     ; 1                    ;
 ; ldz~4    ; 1                    ;
-; lar~7    ; 1                    ;
+; lar~8    ; 1                    ;
 ; ldc~4    ; 1                    ;
-; stop~9   ; 1                    ;
+; stop~8   ; 1                    ;
 ; lpc~4    ; 1                    ;
 ; pcinc~6  ; 1                    ;
 ; selctl~8 ; 1                    ;
-; pcadd~7  ; 1                    ;
+; pcadd~6  ; 1                    ;
 ; sel~20   ; 1                    ;
-; cin~2    ; 1                    ;
+; cin~3    ; 1                    ;
 ; short~4  ; 1                    ;
 ; sel~16   ; 1                    ;
 ; pcinc~4  ; 1                    ;
@@ -470,20 +470,20 @@ Note: User assignments will override these defaults. The user specified values a
 ;  B  ; LC21       ; drw~13, ir[5], ir[6], ir[7], sw[1], sw[2], w[2], ir[4], w[3], sw[3], w[1] ; drw                                                           ;
 ;  B  ; LC20       ; ir[4], ir[6], ir[7], sw[1], sw[2], w[2]                                   ; drw~12                                                        ;
 ;  C  ; LC38       ; t3, w[1], sw[3], sw[1], sw[2]                                             ; lir                                                           ;
-;  C  ; LC40       ; stop~10, sw[1], sw[2], w[2], sw[3], w[1]                                  ; stop                                                          ;
+;  C  ; LC40       ; stop~9, sw[1], sw[2], w[2], sw[3], w[1]                                   ; stop                                                          ;
 ;  C  ; LC35       ; w[2], sw[3], sw[1], sw[2], ir[4], ir[5], ir[6], ir[7]                     ; ldc                                                           ;
 ;  C  ; LC37       ; ir[4], ir[6], ir[7], w[2], sw[3], sw[1], sw[2], ir[5]                     ; ldz                                                           ;
 ;  C  ; LC46       ; st0, sw[1], sw[2], sw[3], w[1]                                            ; arinc                                                         ;
 ;  C  ; LC45       ; st0, w[1], sw[3], sw[1], sw[2], w[2], ir[6], ir[7], ir[4], ir[5]          ; lar                                                           ;
 ;  C  ; LC43       ; ir[6], ir[7], ir[4], ir[5], w[3], sw[3], sw[1], sw[2], st0, w[1]          ; memw                                                          ;
-;  C  ; LC39       ; ir[6], ir[7], ir[4], ir[5], w[2], sw[3], sw[1], sw[2], w[1]               ; stop~9                                                        ;
+;  C  ; LC39       ; ir[6], ir[7], ir[4], ir[5], w[2], sw[3], sw[1], sw[2], w[1]               ; stop~8                                                        ;
 ;  D  ; LC64       ; ir[7], ir[4], ir[5], ir[6], w[2], sw[3], sw[1], sw[2]                     ; cin                                                           ;
-;  D  ; LC50       ; t3, clr, w[2], sw[1], sw[2], sw[3], st0, w[1]                             ; st0, arinc~3, lar~12, sel~23, memw~9, mbus~6, sel~27, sbus~10 ;
+;  D  ; LC50       ; t3, clr, w[2], sw[1], sw[2], sw[3], st0, w[1]                             ; st0, arinc~3, lar~13, sel~23, memw~9, mbus~6, sel~27, sbus~10 ;
 ;  D  ; LC57       ; sw[3], sw[1], sw[2], w[2], ir[7], ir[4], ir[5], ir[6]                     ; s[2]                                                          ;
 ;  D  ; LC61       ; sw[3], sw[1], sw[2], w[2], ir[6], ir[4], ir[5], ir[7]                     ; s[0]                                                          ;
+;  D  ; LC53       ; w[3], sw[3], sw[1], sw[2], ir[7], ir[4], ir[5], ir[6], w[2]               ; m                                                             ;
 ;  D  ; LC59       ; w[2], sw[3], sw[1], sw[2], ir[6], ir[7], ir[4], ir[5], w[3]               ; s[1]                                                          ;
 ;  D  ; LC56       ; w[2], sw[3], sw[1], sw[2], ir[7], ir[4], ir[5], ir[6], w[3]               ; s[3]                                                          ;
-;  D  ; LC53       ; w[3], sw[3], sw[1], sw[2], ir[7], ir[4], ir[5], ir[6], w[2]               ; m                                                             ;
 ;  D  ; LC51       ; ir[7], sw[3], sw[1], sw[2], ir[4], ir[5], w[2], ir[6], w[3]               ; abus                                                          ;
 ;  D  ; LC49       ; w[2], sw[3], sw[1], sw[2], w[1], st0                                      ; sbus                                                          ;
 ;  E  ; LC75       ; w[2], sw[3], sw[1], sw[2]                                                 ; sel[2]                                                        ;
@@ -518,14 +518,14 @@ Note: User assignments will override these defaults. The user specified values a
 Info: *******************************************************************
 Info: Running Quartus II Fitter
     Info: Version 9.1 Build 222 10/21/2009 SJ Full Version
-    Info: Processing started: Wed Jul 11 13:57:04 2018
+    Info: Processing started: Wed Jul 11 16:43:25 2018
 Info: Command: quartus_fit --read_settings_files=off --write_settings_files=off nonpipe -c nonpipe
 Info: Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info: Selected device EPM7128SLC84-15 for design "nonpipe"
 Info: Quartus II Fitter was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 188 megabytes
-    Info: Processing ended: Wed Jul 11 13:57:04 2018
-    Info: Elapsed time: 00:00:00
+    Info: Processing ended: Wed Jul 11 16:43:26 2018
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:00
 
 

@@ -45,9 +45,9 @@ begin
    ldz<=((add and w(2)) or (sub and w(2)) or (aand and w(2)) or (inc and w(2))) and fi;
    ldc<=((add and w(2)) or (sub and w(2)) or (inc and w(2))) and fi;
    cin<=(add and w(2)) and fi;
-   s(3)<=((add and w(2)) or (ld and w(2)) or (st and (w(2) or w(3))) or (jmp and w(2))) and fi;
+   s(3)<=((aand and w(2))or(add and w(2)) or (ld and w(2)) or (st and (w(2) or w(3))) or (jmp and w(2))) and fi;
    s(2)<=((sub and w(2)) or (st and w(2)) or (jmp and w(2))) and fi;
-   s(1)<=((sub and w(2)) or (ld and w(2)) or (st and (w(2) or w(3))) or (jmp and w(2))) and fi;
+   s(1)<=((aand and w(2))or(sub and w(2)) or (ld and w(2)) or (st and (w(2) or w(3))) or (jmp and w(2))) and fi;
    s(0)<=((add and w(2)) or (aand and w(2)) or (st and w(2)) or (jmp and w(2))) and fi;
    m<=(((aand or ld or st or jmp) and w(2)) or (st and w(3))) and fi;
    abus<=(((add or sub or aand or inc or ld or st or jmp) and w(2)) or (st and w(3))) and fi;
@@ -65,10 +65,9 @@ begin
    mbus<=(ld and w(3) and fi) or (rram and st0 and w(1));
    short <=(rram or wram) and w(1);
    long<=(ld or st) and w(2) and fi;
-   sel(0)<=(wreg and w(1)) or (rreg and (w(1) or w(2)));
-   sel(1)<=(wreg and (not st0) and w(1)) or (wreg and st0 and w(2)) or (rreg and w(2));
-  
-   
-   sel(2)<=wreg and w(2);
-   sel(3)<=(wreg and st0) or (rreg and w(2));
+   --sel(0)<=(wreg and w(1)) or (rreg and (w(1) or w(2)));
+   --sel(1)<=(wreg and (not st0) and w(1)) or (wreg and st0 and w(2)) or (rreg and w(2));
+   --sel(2)<=wreg and w(2);
+   --sel(3)<=(wreg and st0) or (rreg and w(2));
+   sel <= "1111";
 end art;

@@ -3,8 +3,8 @@ JedecChain;
 	FileRevision(JESD32A);
 	DefaultMfr(6E);
 
-	P ActionCode(Ign)
-		Device PartName(EPM7128S) MfrSpec(OpMask(0));
+	P ActionCode(Cfg)
+		Device PartName(EPM7128SL84) Path("C:/Users/Administrator/Desktop/NewBeeCpu/nonpipe/") File("nonpipe.pof") MfrSpec(OpMask(1));
 
 ChainEnd;
 
