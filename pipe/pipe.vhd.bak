@@ -48,7 +48,7 @@ begin
 			if (w(2) = '1' and wreg = '1') or (w(1)='1' and st0 = '0' and (rram = '1' or wram = '1' or fi = '1'))then
 				st0 <= not st0;
 			end if;
-			v(1) <= (opt and v(3)) or((not opt) and v(2));
+			v(1) <= (opt and v(3))or(not opt) and v(2);
 		end if;
 	end process;
    

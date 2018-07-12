@@ -1,0 +1,9 @@
+Fitter Status : Successful - Thu Jul 12 16:54:38 2018
+Quartus II Version : 9.1 Build 222 10/21/2009 SJ Full Version
+Revision Name : pipe
+Top-level Entity Name : pipe
+Family : MAX7000S
+Device : EPM7128SLC84-15
+Timing Models : Final
+Total macrocells : 34 / 128 ( 27 % )
+Total pins : 45 / 68 ( 66 % )
