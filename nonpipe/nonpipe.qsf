@@ -89,3 +89,4 @@ set_location_assignment PIN_15 -to w[2]
 set_location_assignment PIN_12 -to w[1]
 set_location_assignment PIN_84 -to z
 set_global_assignment -name MISC_FILE "C:/Users/Administrator/Desktop/nonpipe/nonpipe.dpf"
+set_global_assignment -name MISC_FILE "C:/Users/Administrator/Desktop/NewBeeCpu/nonpipe/nonpipe.dpf"

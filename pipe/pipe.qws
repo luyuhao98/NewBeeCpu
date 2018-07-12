@@ -4,12 +4,10 @@ ptn_Child1=Frames
 ptn_Child1=ChildFrames
 [ProjectWorkspace.Frames.ChildFrames]
 ptn_Child1=Document-0
-ptn_Child2=Document-1
-ptn_Child3=Document-2
 [ProjectWorkspace.Frames.ChildFrames.Document-0]
 ptn_Child1=ViewFrame-0
 [ProjectWorkspace.Frames.ChildFrames.Document-0.ViewFrame-0]
-DocPathName=nonpipe.vhd
+DocPathName=pipe.vhd
 DocumentCLSID={ca385d57-a4c7-11d1-a098-0020affa43f2}
 IsChildFrameDetached=False
 IsActiveChildFrame=True

@@ -22,6 +22,7 @@ sw[3] => Equal4.IN3
 w[1] => process_0.IN1
 w[1] => drw.IN1
 w[1] => pcinc.IN1
+w[1] => lpc.IN1
 w[1] => lar.IN1
 w[1] => arinc.IN1
 w[1] => memw.IN1

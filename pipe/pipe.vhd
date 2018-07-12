@@ -2,7 +2,7 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.std_logic_unsigned.all;
 use ieee.std_logic_arith.all;
-entity nonpipe is
+entity pipe is
 port (
 		clr,t3,c,z : in std_logic;
 		sw , w : in std_logic_vector (3 downto 1);
@@ -10,9 +10,9 @@ port (
 		ldz,ldc,cin,m,abus,drw,pcinc,lpc,lar,pcadd,arinc,selctl,memw,stop,lir,sbus,mbus,short,long: out std_logic;
 		s,sel :out std_logic_vector(3 downto 0)
 );
-end nonpipe ;
+end pipe ;
 
-architecture art of nonpipe is
+architecture art of pipe is
 	signal wreg,rreg,wram,rram,fi,add,sub,aand,inc,ld,st,jc,jz,jmp,stp,st0:std_logic;
 begin
 	wreg <= '1' when sw = "100" else '0';

@@ -6,7 +6,7 @@ Type           : Worst-case tsu
 Slack          : N/A
 Required Time  : None
 Actual Time    : 11.000 ns
-From           : w[1]
+From           : w[2]
 To             : st0
 From Clock     : --
 To Clock       : t3
@@ -15,9 +15,9 @@ Failed Paths   : 0
 Type           : Worst-case tco
 Slack          : N/A
 Required Time  : None
-Actual Time    : 17.000 ns
+Actual Time    : 18.000 ns
 From           : st0
-To             : arinc
+To             : drw
 From Clock     : t3
 To Clock       : --
 Failed Paths   : 0
@@ -26,8 +26,8 @@ Type           : Worst-case tpd
 Slack          : N/A
 Required Time  : None
 Actual Time    : 16.000 ns
-From           : ir[6]
-To             : stop
+From           : ir[4]
+To             : drw
 From Clock     : --
 To Clock       : --
 Failed Paths   : 0
@@ -36,7 +36,7 @@ Type           : Worst-case th
 Slack          : N/A
 Required Time  : None
 Actual Time    : -3.000 ns
-From           : w[1]
+From           : w[2]
 To             : st0
 From Clock     : --
 To Clock       : t3
