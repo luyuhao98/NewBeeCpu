@@ -17,7 +17,7 @@ Slack          : N/A
 Required Time  : None
 Actual Time    : 18.000 ns
 From           : st0
-To             : drw
+To             : m
 From Clock     : t3
 To Clock       : --
 Failed Paths   : 0
@@ -26,8 +26,8 @@ Type           : Worst-case tpd
 Slack          : N/A
 Required Time  : None
 Actual Time    : 16.000 ns
-From           : ir[4]
-To             : drw
+From           : ir[7]
+To             : m
 From Clock     : --
 To Clock       : --
 Failed Paths   : 0

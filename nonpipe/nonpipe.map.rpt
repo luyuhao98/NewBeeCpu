@@ -1,5 +1,5 @@
 Analysis & Synthesis report for nonpipe
-Thu Jul 12 13:01:35 2018
+Fri Jul 13 16:53:45 2018
 Quartus II Version 9.1 Build 222 10/21/2009 SJ Full Version
 
 
@@ -39,12 +39,12 @@ applicable agreement for further details.
 +------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                           ;
 +-----------------------------+------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Thu Jul 12 13:01:35 2018    ;
+; Analysis & Synthesis Status ; Successful - Fri Jul 13 16:53:45 2018    ;
 ; Quartus II Version          ; 9.1 Build 222 10/21/2009 SJ Full Version ;
 ; Revision Name               ; nonpipe                                  ;
 ; Top-level Entity Name       ; nonpipe                                  ;
 ; Family                      ; MAX7000S                                 ;
-; Total macrocells            ; 30                                       ;
+; Total macrocells            ; 34                                       ;
 ; Total pins                  ; 41                                       ;
 +-----------------------------+------------------------------------------+
 
@@ -139,14 +139,14 @@ applicable agreement for further details.
 +----------------------+----------------------+
 ; Resource             ; Usage                ;
 +----------------------+----------------------+
-; Logic cells          ; 30                   ;
+; Logic cells          ; 34                   ;
 ; Total registers      ; 1                    ;
 ; I/O pins             ; 41                   ;
-; Parallel expanders   ; 2                    ;
+; Parallel expanders   ; 6                    ;
 ; Maximum fan-out node ; sw[1]                ;
-; Maximum fan-out      ; 30                   ;
-; Total fan-out        ; 270                  ;
-; Average fan-out      ; 3.80                 ;
+; Maximum fan-out      ; 34                   ;
+; Total fan-out        ; 307                  ;
+; Average fan-out      ; 4.09                 ;
 +----------------------+----------------------+
 
 
@@ -155,7 +155,7 @@ applicable agreement for further details.
 +----------------------------+------------+------+---------------------+--------------+
 ; Compilation Hierarchy Node ; Macrocells ; Pins ; Full Hierarchy Name ; Library Name ;
 +----------------------------+------------+------+---------------------+--------------+
-; |nonpipe                   ; 30         ; 41   ; |nonpipe            ; work         ;
+; |nonpipe                   ; 34         ; 41   ; |nonpipe            ; work         ;
 +----------------------------+------------+------+---------------------+--------------+
 
 
@@ -165,24 +165,24 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 9.1 Build 222 10/21/2009 SJ Full Version
-    Info: Processing started: Thu Jul 12 13:01:34 2018
+    Info: Processing started: Fri Jul 13 16:53:44 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off nonpipe -c nonpipe
 Info: Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info: Found 2 design units, including 1 entities, in source file nonpipe.vhd
     Info: Found design unit 1: nonpipe-art
     Info: Found entity 1: nonpipe
 Info: Elaborating entity "nonpipe" for the top level hierarchy
-Warning (10492): VHDL Process Statement warning at nonpipe.vhd(38): signal "t3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at nonpipe.vhd(42): signal "t3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Info: Promoted pin-driven signal(s) to global signal
     Info: Promoted clear signal driven by pin "clr" to global clear signal
     Info: Promoted clock signal driven by pin "t3" to global clock signal
-Info: Implemented 71 device resources after synthesis - the final resource count might be different
+Info: Implemented 75 device resources after synthesis - the final resource count might be different
     Info: Implemented 14 input pins
     Info: Implemented 27 output pins
-    Info: Implemented 30 macrocells
+    Info: Implemented 34 macrocells
 Info: Quartus II Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 215 megabytes
-    Info: Processing ended: Thu Jul 12 13:01:35 2018
+    Info: Peak virtual memory: 216 megabytes
+    Info: Processing ended: Fri Jul 13 16:53:45 2018
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 

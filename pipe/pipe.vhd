@@ -13,7 +13,7 @@ port (
 end pipe ;
 
 architecture art of pipe is
-	signal wreg,rreg,wram,rram,fi,add,sub,aand,inc,ld,st,jc,jz,jmp,stp,st0:std_logic;
+	signal wreg,rreg,wram,rram,fi,add,sub,aand,inc,ld,st,jc,jz,jmp,stp,dec,xxor,cmp,mov,cla,oout,st0:std_logic;
 	signal v:std_logic_vector(3 downto 1);
 	
 begin
@@ -22,6 +22,7 @@ begin
 	wram <= '1' when sw = "001" else '0';
 	rram <= '1' when sw = "010" else '0';
 	fi <= '1' when sw = "000" else '0';
+	oout <= '1' when ir = "0000" else '0';
 	add <= '1' when ir = "0001" else '0';
 	sub <= '1' when ir = "0010" else '0';
 	aand <= '1' when ir = "0011" else '0';
@@ -31,7 +32,12 @@ begin
 	jc <= '1' when ir = "0111" else '0';
 	jz <= '1' when ir = "1000" else '0';
 	jmp <= '1' when ir = "1001" else '0';
+	mov <= '1' when ir = "1010" else '0';
+	cmp <= '1' when ir = "1011" else '0';
+	cla <= '1' when ir = "1100" else '0';
+	dec <= '1' when ir = "1101" else '0';
 	stp <= '1' when ir = "1110" else '0';
+	xxor <= '1' when ir = "1111" else '0';
 	
 	process(clr,w)
 	variable u:std_logic_vector(3 downto 1);
@@ -58,16 +64,16 @@ begin
 		v <= u;
 	end process;
    
-   ldz<=((add and v(2)) or (sub and v(2)) or (aand and v(2)) or (inc and v(2))) and fi and st0;
-   ldc<=((add and v(2)) or (sub and v(2)) or (inc and v(2))) and fi and st0;
-   cin<=(add and v(2)) and fi and st0;
-   s(3)<=((aand and v(2))or(add and v(2)) or (ld and v(2)) or (st and (v(2) or v(3))) or (jmp and v(2))) and fi and st0;
-   s(2)<=((sub and v(2)) or (st and v(2)) or (jmp and v(2))) and fi and st0;
-   s(1)<=((aand and v(2))or(sub and v(2)) or (ld and v(2)) or (st and (v(2) or v(3))) or (jmp and v(2))) and fi and st0;
-   s(0)<=((add and v(2)) or (aand and v(2)) or (st and v(2)) or (jmp and v(2))) and fi and st0;
-   m<=(((aand or ld or st or jmp) and v(2)) or (st and v(3))) and fi and st0;
-   abus<=(((add or sub or aand or inc or ld or st or jmp) and v(2)) or (st and v(3))) and fi and st0;
-   drw<=((((add or sub or aand or inc) and v(2)) or (ld and v(3))) and fi and st0)  or (wreg and (w(1) or w(2)));
+   ldz<=(((add or sub or aand or inc or dec or xxor or oout)and v(2))or (cmp and v(3))) and fi and st0;
+   ldc<=(((add or sub or inc or dec or xxor) and v(2)) or (cmp and v(3))) and fi and st0;
+   cin<=(((add or dec or oout) and v(2))or (cmp and v(3))) and fi and st0;
+   s(3)<=(((aand or add or ld or jmp or mov or dec or st)and v(2)) or ((cmp or st) and v(3))) and fi and st0;
+   s(2)<=(((sub or st or jmp or dec or xxor or cmp) and v(2)) or (cmp and v(3))) and fi and st0;
+   s(1)<=(((aand or sub or ld or st or jmp or mov or xxor or cmp or cla or dec) and v(2)) or (st and v(3)) ) and fi and st0;
+   s(0)<=(((add or aand or st or jmp or dec or cla) and v(2))) and fi and st0;
+   m<=(((aand or ld or st or jmp or mov or cla or xxor) and v(2)) or (st and v(3))) and fi and st0;
+   abus<=(((add or sub or aand or inc or ld or st or jmp or oout or mov or cla or dec or xxor or cmp) and v(2)) or (st and v(3))) and fi and st0;
+   drw<=((((add or sub or aand or inc or mov or cla or dec or xxor or cmp) and v(2)) or (ld and v(3))) and fi and st0)  or (wreg and (w(1) or w(2)));
    pcinc<= v(1) and fi and st0;
    lpc<= (jmp and v(2) and fi and st0) or (fi and (not st0) and w(1));
    lar<=((ld or st) and v(2) and fi and st0) or ((rram or wram) and (not st0) and w(1));
@@ -78,7 +84,7 @@ begin
    stop<=(stp and v(2) and fi and st0) or ((wreg or rreg or rram or wram) and (w(1) or w(2)))or(fi and (not st0) and w(1));
    lir<= v(1) and fi and st0;
    sbus<=(wreg and (w(1) or w(2))) or (rram and (not st0) and w(1)) or (wram and w(1))or(fi and (not st0) and w(1));
-   mbus<=(ld and v(3) and fi and st0) or (rram and st0 and w(1));
+   mbus<=(ld and w(3) and fi and st0) or (rram and st0 and w(1));
    short <=(rram or wram or (fi and (not st0))) and w(1);
    sel(0)<=(wreg and w(1)) or (rreg and (w(1) or w(2)));
    sel(1)<=(wreg and (not st0) and w(1)) or (wreg and st0 and w(2)) or (rreg and w(2));

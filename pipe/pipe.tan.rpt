@@ -1,5 +1,5 @@
 Classic Timing Analyzer report for pipe
-Fri Jul 13 12:04:35 2018
+Fri Jul 13 15:15:06 2018
 Quartus II Version 9.1 Build 222 10/21/2009 SJ Full Version
 
 
@@ -45,8 +45,8 @@ applicable agreement for further details.
 ; Type                         ; Slack ; Required Time ; Actual Time                      ; From  ; To   ; From Clock ; To Clock ; Failed Paths ;
 +------------------------------+-------+---------------+----------------------------------+-------+------+------------+----------+--------------+
 ; Worst-case tsu               ; N/A   ; None          ; 11.000 ns                        ; w[2]  ; st0  ; --         ; t3       ; 0            ;
-; Worst-case tco               ; N/A   ; None          ; 18.000 ns                        ; u[2]  ; drw  ; t3         ; --       ; 0            ;
-; Worst-case tpd               ; N/A   ; None          ; 16.000 ns                        ; ir[6] ; drw  ; --         ; --       ; 0            ;
+; Worst-case tco               ; N/A   ; None          ; 18.000 ns                        ; u[2]  ; stop ; t3         ; --       ; 0            ;
+; Worst-case tpd               ; N/A   ; None          ; 16.000 ns                        ; ir[6] ; stop ; --         ; --       ; 0            ;
 ; Worst-case th                ; N/A   ; None          ; -3.000 ns                        ; w[2]  ; st0  ; --         ; t3       ; 0            ;
 ; Clock Setup: 't3'            ; N/A   ; None          ; 76.92 MHz ( period = 13.000 ns ) ; u[1]  ; u[3] ; t3         ; t3       ; 0            ;
 ; Total number of failed paths ;       ;               ;                                  ;       ;      ;            ;          ; 0            ;
@@ -153,35 +153,33 @@ applicable agreement for further details.
 +-------+--------------+------------+------+--------+------------+
 ; N/A   ; None         ; 18.000 ns  ; st0  ; stop   ; t3         ;
 ; N/A   ; None         ; 18.000 ns  ; u[2] ; stop   ; t3         ;
-; N/A   ; None         ; 18.000 ns  ; st0  ; drw    ; t3         ;
-; N/A   ; None         ; 18.000 ns  ; u[2] ; drw    ; t3         ;
-; N/A   ; None         ; 17.000 ns  ; st0  ; mbus   ; t3         ;
-; N/A   ; None         ; 17.000 ns  ; u[3] ; mbus   ; t3         ;
-; N/A   ; None         ; 17.000 ns  ; st0  ; sbus   ; t3         ;
-; N/A   ; None         ; 17.000 ns  ; st0  ; memw   ; t3         ;
-; N/A   ; None         ; 17.000 ns  ; u[3] ; memw   ; t3         ;
-; N/A   ; None         ; 17.000 ns  ; u[3] ; drw    ; t3         ;
-; N/A   ; None         ; 17.000 ns  ; st0  ; s[3]   ; t3         ;
-; N/A   ; None         ; 17.000 ns  ; u[2] ; s[3]   ; t3         ;
-; N/A   ; None         ; 17.000 ns  ; u[3] ; s[3]   ; t3         ;
 ; N/A   ; None         ; 17.000 ns  ; st0  ; s[1]   ; t3         ;
 ; N/A   ; None         ; 17.000 ns  ; u[2] ; s[1]   ; t3         ;
 ; N/A   ; None         ; 17.000 ns  ; u[3] ; s[1]   ; t3         ;
-; N/A   ; None         ; 17.000 ns  ; st0  ; lpc    ; t3         ;
-; N/A   ; None         ; 17.000 ns  ; u[2] ; lpc    ; t3         ;
+; N/A   ; None         ; 17.000 ns  ; st0  ; sbus   ; t3         ;
+; N/A   ; None         ; 17.000 ns  ; st0  ; memw   ; t3         ;
+; N/A   ; None         ; 17.000 ns  ; u[3] ; memw   ; t3         ;
+; N/A   ; None         ; 17.000 ns  ; st0  ; drw    ; t3         ;
+; N/A   ; None         ; 17.000 ns  ; u[2] ; drw    ; t3         ;
+; N/A   ; None         ; 17.000 ns  ; u[3] ; drw    ; t3         ;
 ; N/A   ; None         ; 17.000 ns  ; st0  ; abus   ; t3         ;
 ; N/A   ; None         ; 17.000 ns  ; u[2] ; abus   ; t3         ;
 ; N/A   ; None         ; 17.000 ns  ; u[3] ; abus   ; t3         ;
+; N/A   ; None         ; 17.000 ns  ; st0  ; lpc    ; t3         ;
+; N/A   ; None         ; 17.000 ns  ; u[2] ; lpc    ; t3         ;
 ; N/A   ; None         ; 17.000 ns  ; st0  ; m      ; t3         ;
 ; N/A   ; None         ; 17.000 ns  ; u[2] ; m      ; t3         ;
 ; N/A   ; None         ; 17.000 ns  ; u[3] ; m      ; t3         ;
 ; N/A   ; None         ; 17.000 ns  ; st0  ; sel[1] ; t3         ;
-; N/A   ; None         ; 17.000 ns  ; st0  ; s[0]   ; t3         ;
-; N/A   ; None         ; 17.000 ns  ; u[2] ; s[0]   ; t3         ;
+; N/A   ; None         ; 17.000 ns  ; st0  ; s[3]   ; t3         ;
+; N/A   ; None         ; 17.000 ns  ; u[2] ; s[3]   ; t3         ;
+; N/A   ; None         ; 17.000 ns  ; u[3] ; s[3]   ; t3         ;
 ; N/A   ; None         ; 17.000 ns  ; st0  ; lar    ; t3         ;
 ; N/A   ; None         ; 17.000 ns  ; u[2] ; lar    ; t3         ;
 ; N/A   ; None         ; 17.000 ns  ; st0  ; s[2]   ; t3         ;
 ; N/A   ; None         ; 17.000 ns  ; u[2] ; s[2]   ; t3         ;
+; N/A   ; None         ; 17.000 ns  ; st0  ; s[0]   ; t3         ;
+; N/A   ; None         ; 17.000 ns  ; u[2] ; s[0]   ; t3         ;
 ; N/A   ; None         ; 17.000 ns  ; st0  ; short  ; t3         ;
 ; N/A   ; None         ; 17.000 ns  ; st0  ; lir    ; t3         ;
 ; N/A   ; None         ; 17.000 ns  ; u[1] ; lir    ; t3         ;
@@ -191,11 +189,12 @@ applicable agreement for further details.
 ; N/A   ; None         ; 17.000 ns  ; u[2] ; cin    ; t3         ;
 ; N/A   ; None         ; 17.000 ns  ; st0  ; ldc    ; t3         ;
 ; N/A   ; None         ; 17.000 ns  ; u[2] ; ldc    ; t3         ;
-; N/A   ; None         ; 17.000 ns  ; st0  ; ldz    ; t3         ;
-; N/A   ; None         ; 17.000 ns  ; u[2] ; ldz    ; t3         ;
 ; N/A   ; None         ; 17.000 ns  ; st0  ; sel[3] ; t3         ;
 ; N/A   ; None         ; 17.000 ns  ; st0  ; pcinc  ; t3         ;
 ; N/A   ; None         ; 17.000 ns  ; u[1] ; pcinc  ; t3         ;
+; N/A   ; None         ; 17.000 ns  ; st0  ; ldz    ; t3         ;
+; N/A   ; None         ; 17.000 ns  ; u[2] ; ldz    ; t3         ;
+; N/A   ; None         ; 17.000 ns  ; st0  ; mbus   ; t3         ;
 ; N/A   ; None         ; 17.000 ns  ; st0  ; arinc  ; t3         ;
 ; N/A   ; None         ; 17.000 ns  ; st0  ; selctl ; t3         ;
 +-------+--------------+------------+------+--------+------------+
@@ -214,20 +213,13 @@ applicable agreement for further details.
 ; N/A   ; None              ; 16.000 ns       ; ir[4] ; stop   ;
 ; N/A   ; None              ; 16.000 ns       ; ir[7] ; stop   ;
 ; N/A   ; None              ; 16.000 ns       ; ir[6] ; stop   ;
-; N/A   ; None              ; 16.000 ns       ; sw[3] ; drw    ;
-; N/A   ; None              ; 16.000 ns       ; sw[1] ; drw    ;
-; N/A   ; None              ; 16.000 ns       ; sw[2] ; drw    ;
-; N/A   ; None              ; 16.000 ns       ; ir[4] ; drw    ;
-; N/A   ; None              ; 16.000 ns       ; ir[7] ; drw    ;
-; N/A   ; None              ; 16.000 ns       ; ir[6] ; drw    ;
-; N/A   ; None              ; 15.000 ns       ; sw[3] ; mbus   ;
-; N/A   ; None              ; 15.000 ns       ; sw[1] ; mbus   ;
-; N/A   ; None              ; 15.000 ns       ; sw[2] ; mbus   ;
-; N/A   ; None              ; 15.000 ns       ; w[1]  ; mbus   ;
-; N/A   ; None              ; 15.000 ns       ; ir[5] ; mbus   ;
-; N/A   ; None              ; 15.000 ns       ; ir[4] ; mbus   ;
-; N/A   ; None              ; 15.000 ns       ; ir[7] ; mbus   ;
-; N/A   ; None              ; 15.000 ns       ; ir[6] ; mbus   ;
+; N/A   ; None              ; 15.000 ns       ; sw[3] ; s[1]   ;
+; N/A   ; None              ; 15.000 ns       ; sw[1] ; s[1]   ;
+; N/A   ; None              ; 15.000 ns       ; sw[2] ; s[1]   ;
+; N/A   ; None              ; 15.000 ns       ; ir[5] ; s[1]   ;
+; N/A   ; None              ; 15.000 ns       ; ir[4] ; s[1]   ;
+; N/A   ; None              ; 15.000 ns       ; ir[7] ; s[1]   ;
+; N/A   ; None              ; 15.000 ns       ; ir[6] ; s[1]   ;
 ; N/A   ; None              ; 15.000 ns       ; w[2]  ; sbus   ;
 ; N/A   ; None              ; 15.000 ns       ; sw[3] ; sbus   ;
 ; N/A   ; None              ; 15.000 ns       ; sw[1] ; sbus   ;
@@ -243,22 +235,21 @@ applicable agreement for further details.
 ; N/A   ; None              ; 15.000 ns       ; ir[7] ; memw   ;
 ; N/A   ; None              ; 15.000 ns       ; ir[6] ; memw   ;
 ; N/A   ; None              ; 15.000 ns       ; w[2]  ; drw    ;
+; N/A   ; None              ; 15.000 ns       ; sw[3] ; drw    ;
+; N/A   ; None              ; 15.000 ns       ; sw[1] ; drw    ;
+; N/A   ; None              ; 15.000 ns       ; sw[2] ; drw    ;
 ; N/A   ; None              ; 15.000 ns       ; w[1]  ; drw    ;
 ; N/A   ; None              ; 15.000 ns       ; ir[5] ; drw    ;
-; N/A   ; None              ; 15.000 ns       ; sw[3] ; s[3]   ;
-; N/A   ; None              ; 15.000 ns       ; sw[1] ; s[3]   ;
-; N/A   ; None              ; 15.000 ns       ; sw[2] ; s[3]   ;
-; N/A   ; None              ; 15.000 ns       ; ir[5] ; s[3]   ;
-; N/A   ; None              ; 15.000 ns       ; ir[4] ; s[3]   ;
-; N/A   ; None              ; 15.000 ns       ; ir[7] ; s[3]   ;
-; N/A   ; None              ; 15.000 ns       ; ir[6] ; s[3]   ;
-; N/A   ; None              ; 15.000 ns       ; sw[3] ; s[1]   ;
-; N/A   ; None              ; 15.000 ns       ; sw[1] ; s[1]   ;
-; N/A   ; None              ; 15.000 ns       ; sw[2] ; s[1]   ;
-; N/A   ; None              ; 15.000 ns       ; ir[5] ; s[1]   ;
-; N/A   ; None              ; 15.000 ns       ; ir[4] ; s[1]   ;
-; N/A   ; None              ; 15.000 ns       ; ir[7] ; s[1]   ;
-; N/A   ; None              ; 15.000 ns       ; ir[6] ; s[1]   ;
+; N/A   ; None              ; 15.000 ns       ; ir[4] ; drw    ;
+; N/A   ; None              ; 15.000 ns       ; ir[7] ; drw    ;
+; N/A   ; None              ; 15.000 ns       ; ir[6] ; drw    ;
+; N/A   ; None              ; 15.000 ns       ; sw[3] ; abus   ;
+; N/A   ; None              ; 15.000 ns       ; sw[1] ; abus   ;
+; N/A   ; None              ; 15.000 ns       ; sw[2] ; abus   ;
+; N/A   ; None              ; 15.000 ns       ; ir[5] ; abus   ;
+; N/A   ; None              ; 15.000 ns       ; ir[4] ; abus   ;
+; N/A   ; None              ; 15.000 ns       ; ir[7] ; abus   ;
+; N/A   ; None              ; 15.000 ns       ; ir[6] ; abus   ;
 ; N/A   ; None              ; 15.000 ns       ; sw[3] ; lpc    ;
 ; N/A   ; None              ; 15.000 ns       ; sw[1] ; lpc    ;
 ; N/A   ; None              ; 15.000 ns       ; sw[2] ; lpc    ;
@@ -267,13 +258,6 @@ applicable agreement for further details.
 ; N/A   ; None              ; 15.000 ns       ; ir[4] ; lpc    ;
 ; N/A   ; None              ; 15.000 ns       ; ir[7] ; lpc    ;
 ; N/A   ; None              ; 15.000 ns       ; ir[6] ; lpc    ;
-; N/A   ; None              ; 15.000 ns       ; sw[3] ; abus   ;
-; N/A   ; None              ; 15.000 ns       ; sw[1] ; abus   ;
-; N/A   ; None              ; 15.000 ns       ; sw[2] ; abus   ;
-; N/A   ; None              ; 15.000 ns       ; ir[5] ; abus   ;
-; N/A   ; None              ; 15.000 ns       ; ir[4] ; abus   ;
-; N/A   ; None              ; 15.000 ns       ; ir[7] ; abus   ;
-; N/A   ; None              ; 15.000 ns       ; ir[6] ; abus   ;
 ; N/A   ; None              ; 15.000 ns       ; sw[3] ; m      ;
 ; N/A   ; None              ; 15.000 ns       ; sw[1] ; m      ;
 ; N/A   ; None              ; 15.000 ns       ; sw[2] ; m      ;
@@ -286,13 +270,9 @@ applicable agreement for further details.
 ; N/A   ; None              ; 15.000 ns       ; sw[1] ; sel[1] ;
 ; N/A   ; None              ; 15.000 ns       ; sw[2] ; sel[1] ;
 ; N/A   ; None              ; 15.000 ns       ; w[1]  ; sel[1] ;
-; N/A   ; None              ; 15.000 ns       ; sw[3] ; s[0]   ;
-; N/A   ; None              ; 15.000 ns       ; sw[1] ; s[0]   ;
-; N/A   ; None              ; 15.000 ns       ; sw[2] ; s[0]   ;
-; N/A   ; None              ; 15.000 ns       ; ir[5] ; s[0]   ;
-; N/A   ; None              ; 15.000 ns       ; ir[4] ; s[0]   ;
-; N/A   ; None              ; 15.000 ns       ; ir[7] ; s[0]   ;
-; N/A   ; None              ; 15.000 ns       ; ir[6] ; s[0]   ;
+; N/A   ; None              ; 15.000 ns       ; sw[3] ; s[3]   ;
+; N/A   ; None              ; 15.000 ns       ; sw[1] ; s[3]   ;
+; N/A   ; None              ; 15.000 ns       ; sw[2] ; s[3]   ;
 ; N/A   ; None              ; 15.000 ns       ; sw[3] ; lar    ;
 ; N/A   ; None              ; 15.000 ns       ; sw[1] ; lar    ;
 ; N/A   ; None              ; 15.000 ns       ; sw[2] ; lar    ;
@@ -304,10 +284,9 @@ applicable agreement for further details.
 ; N/A   ; None              ; 15.000 ns       ; sw[3] ; s[2]   ;
 ; N/A   ; None              ; 15.000 ns       ; sw[1] ; s[2]   ;
 ; N/A   ; None              ; 15.000 ns       ; sw[2] ; s[2]   ;
-; N/A   ; None              ; 15.000 ns       ; ir[5] ; s[2]   ;
-; N/A   ; None              ; 15.000 ns       ; ir[4] ; s[2]   ;
-; N/A   ; None              ; 15.000 ns       ; ir[7] ; s[2]   ;
-; N/A   ; None              ; 15.000 ns       ; ir[6] ; s[2]   ;
+; N/A   ; None              ; 15.000 ns       ; sw[3] ; s[0]   ;
+; N/A   ; None              ; 15.000 ns       ; sw[1] ; s[0]   ;
+; N/A   ; None              ; 15.000 ns       ; sw[2] ; s[0]   ;
 ; N/A   ; None              ; 15.000 ns       ; sw[3] ; short  ;
 ; N/A   ; None              ; 15.000 ns       ; sw[1] ; short  ;
 ; N/A   ; None              ; 15.000 ns       ; sw[2] ; short  ;
@@ -327,24 +306,9 @@ applicable agreement for further details.
 ; N/A   ; None              ; 15.000 ns       ; sw[3] ; cin    ;
 ; N/A   ; None              ; 15.000 ns       ; sw[1] ; cin    ;
 ; N/A   ; None              ; 15.000 ns       ; sw[2] ; cin    ;
-; N/A   ; None              ; 15.000 ns       ; ir[5] ; cin    ;
-; N/A   ; None              ; 15.000 ns       ; ir[4] ; cin    ;
-; N/A   ; None              ; 15.000 ns       ; ir[7] ; cin    ;
-; N/A   ; None              ; 15.000 ns       ; ir[6] ; cin    ;
 ; N/A   ; None              ; 15.000 ns       ; sw[3] ; ldc    ;
 ; N/A   ; None              ; 15.000 ns       ; sw[1] ; ldc    ;
 ; N/A   ; None              ; 15.000 ns       ; sw[2] ; ldc    ;
-; N/A   ; None              ; 15.000 ns       ; ir[5] ; ldc    ;
-; N/A   ; None              ; 15.000 ns       ; ir[4] ; ldc    ;
-; N/A   ; None              ; 15.000 ns       ; ir[7] ; ldc    ;
-; N/A   ; None              ; 15.000 ns       ; ir[6] ; ldc    ;
-; N/A   ; None              ; 15.000 ns       ; sw[3] ; ldz    ;
-; N/A   ; None              ; 15.000 ns       ; sw[1] ; ldz    ;
-; N/A   ; None              ; 15.000 ns       ; sw[2] ; ldz    ;
-; N/A   ; None              ; 15.000 ns       ; ir[5] ; ldz    ;
-; N/A   ; None              ; 15.000 ns       ; ir[4] ; ldz    ;
-; N/A   ; None              ; 15.000 ns       ; ir[7] ; ldz    ;
-; N/A   ; None              ; 15.000 ns       ; ir[6] ; ldz    ;
 ; N/A   ; None              ; 15.000 ns       ; w[2]  ; sel[3] ;
 ; N/A   ; None              ; 15.000 ns       ; sw[3] ; sel[3] ;
 ; N/A   ; None              ; 15.000 ns       ; sw[1] ; sel[3] ;
@@ -352,6 +316,18 @@ applicable agreement for further details.
 ; N/A   ; None              ; 15.000 ns       ; sw[3] ; pcinc  ;
 ; N/A   ; None              ; 15.000 ns       ; sw[1] ; pcinc  ;
 ; N/A   ; None              ; 15.000 ns       ; sw[2] ; pcinc  ;
+; N/A   ; None              ; 15.000 ns       ; sw[3] ; ldz    ;
+; N/A   ; None              ; 15.000 ns       ; sw[1] ; ldz    ;
+; N/A   ; None              ; 15.000 ns       ; sw[2] ; ldz    ;
+; N/A   ; None              ; 15.000 ns       ; sw[3] ; mbus   ;
+; N/A   ; None              ; 15.000 ns       ; sw[1] ; mbus   ;
+; N/A   ; None              ; 15.000 ns       ; sw[2] ; mbus   ;
+; N/A   ; None              ; 15.000 ns       ; w[1]  ; mbus   ;
+; N/A   ; None              ; 15.000 ns       ; ir[5] ; mbus   ;
+; N/A   ; None              ; 15.000 ns       ; ir[4] ; mbus   ;
+; N/A   ; None              ; 15.000 ns       ; ir[7] ; mbus   ;
+; N/A   ; None              ; 15.000 ns       ; ir[6] ; mbus   ;
+; N/A   ; None              ; 15.000 ns       ; w[3]  ; mbus   ;
 ; N/A   ; None              ; 15.000 ns       ; sw[3] ; arinc  ;
 ; N/A   ; None              ; 15.000 ns       ; sw[1] ; arinc  ;
 ; N/A   ; None              ; 15.000 ns       ; sw[2] ; arinc  ;
@@ -400,7 +376,7 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II Classic Timing Analyzer
     Info: Version 9.1 Build 222 10/21/2009 SJ Full Version
-    Info: Processing started: Fri Jul 13 12:04:35 2018
+    Info: Processing started: Fri Jul 13 15:15:06 2018
 Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off pipe -c pipe
 Info: Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info: Started post-fitting delay annotation
@@ -410,24 +386,24 @@ Warning: Found pins functioning as undefined clocks and/or memory enables
     Info: Assuming node "t3" is an undefined clock
 Info: Clock "t3" has Internal fmax of 76.92 MHz between source register "st0" and destination register "st0" (period= 13.0 ns)
     Info: + Longest register to register delay is 8.000 ns
-        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC33; Fanout = 63; REG Node = 'st0'
-        Info: 2: + IC(2.000 ns) + CELL(6.000 ns) = 8.000 ns; Loc. = LC33; Fanout = 63; REG Node = 'st0'
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC33; Fanout = 42; REG Node = 'st0'
+        Info: 2: + IC(2.000 ns) + CELL(6.000 ns) = 8.000 ns; Loc. = LC33; Fanout = 42; REG Node = 'st0'
         Info: Total cell delay = 6.000 ns ( 75.00 % )
         Info: Total interconnect delay = 2.000 ns ( 25.00 % )
     Info: - Smallest clock skew is 0.000 ns
         Info: + Shortest clock path from clock "t3" to destination register is 3.000 ns
             Info: 1: + IC(0.000 ns) + CELL(3.000 ns) = 3.000 ns; Loc. = PIN_83; Fanout = 4; CLK Node = 't3'
-            Info: 2: + IC(0.000 ns) + CELL(0.000 ns) = 3.000 ns; Loc. = LC33; Fanout = 63; REG Node = 'st0'
+            Info: 2: + IC(0.000 ns) + CELL(0.000 ns) = 3.000 ns; Loc. = LC33; Fanout = 42; REG Node = 'st0'
             Info: Total cell delay = 3.000 ns ( 100.00 % )
         Info: - Longest clock path from clock "t3" to source register is 3.000 ns
             Info: 1: + IC(0.000 ns) + CELL(3.000 ns) = 3.000 ns; Loc. = PIN_83; Fanout = 4; CLK Node = 't3'
-            Info: 2: + IC(0.000 ns) + CELL(0.000 ns) = 3.000 ns; Loc. = LC33; Fanout = 63; REG Node = 'st0'
+            Info: 2: + IC(0.000 ns) + CELL(0.000 ns) = 3.000 ns; Loc. = LC33; Fanout = 42; REG Node = 'st0'
             Info: Total cell delay = 3.000 ns ( 100.00 % )
     Info: + Micro clock to output delay of source is 1.000 ns
     Info: + Micro setup delay of destination is 4.000 ns
 Info: tsu for register "u[1]" (data pin = "ir[6]", clock pin = "t3") is 11.000 ns
     Info: + Longest pin to register delay is 10.000 ns
-        Info: 1: + IC(0.000 ns) + CELL(2.000 ns) = 2.000 ns; Loc. = PIN_10; Fanout = 46; PIN Node = 'ir[6]'
+        Info: 1: + IC(0.000 ns) + CELL(2.000 ns) = 2.000 ns; Loc. = PIN_10; Fanout = 18; PIN Node = 'ir[6]'
         Info: 2: + IC(2.000 ns) + CELL(6.000 ns) = 10.000 ns; Loc. = LC41; Fanout = 7; REG Node = 'u[1]'
         Info: Total cell delay = 8.000 ns ( 80.00 % )
         Info: Total interconnect delay = 2.000 ns ( 20.00 % )
@@ -439,20 +415,20 @@ Info: tsu for register "u[1]" (data pin = "ir[6]", clock pin = "t3") is 11.000 n
 Info: tco from clock "t3" to destination pin "stop" through register "st0" is 18.000 ns
     Info: + Longest clock path from clock "t3" to source register is 3.000 ns
         Info: 1: + IC(0.000 ns) + CELL(3.000 ns) = 3.000 ns; Loc. = PIN_83; Fanout = 4; CLK Node = 't3'
-        Info: 2: + IC(0.000 ns) + CELL(0.000 ns) = 3.000 ns; Loc. = LC33; Fanout = 63; REG Node = 'st0'
+        Info: 2: + IC(0.000 ns) + CELL(0.000 ns) = 3.000 ns; Loc. = LC33; Fanout = 42; REG Node = 'st0'
         Info: Total cell delay = 3.000 ns ( 100.00 % )
     Info: + Micro clock to output delay of source is 1.000 ns
     Info: + Longest register to pin delay is 14.000 ns
-        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC33; Fanout = 63; REG Node = 'st0'
-        Info: 2: + IC(2.000 ns) + CELL(6.000 ns) = 8.000 ns; Loc. = LC39; Fanout = 1; COMB Node = 'stop~11'
-        Info: 3: + IC(0.000 ns) + CELL(2.000 ns) = 10.000 ns; Loc. = LC40; Fanout = 1; COMB Node = 'stop~10'
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC33; Fanout = 42; REG Node = 'st0'
+        Info: 2: + IC(2.000 ns) + CELL(6.000 ns) = 8.000 ns; Loc. = LC39; Fanout = 1; COMB Node = 'stop~12'
+        Info: 3: + IC(0.000 ns) + CELL(2.000 ns) = 10.000 ns; Loc. = LC40; Fanout = 1; COMB Node = 'stop~11'
         Info: 4: + IC(0.000 ns) + CELL(4.000 ns) = 14.000 ns; Loc. = PIN_28; Fanout = 0; PIN Node = 'stop'
         Info: Total cell delay = 12.000 ns ( 85.71 % )
         Info: Total interconnect delay = 2.000 ns ( 14.29 % )
 Info: Longest tpd from source pin "sw[3]" to destination pin "stop" is 16.000 ns
-    Info: 1: + IC(0.000 ns) + CELL(2.000 ns) = 2.000 ns; Loc. = PIN_6; Fanout = 85; PIN Node = 'sw[3]'
-    Info: 2: + IC(2.000 ns) + CELL(6.000 ns) = 10.000 ns; Loc. = LC39; Fanout = 1; COMB Node = 'stop~11'
-    Info: 3: + IC(0.000 ns) + CELL(2.000 ns) = 12.000 ns; Loc. = LC40; Fanout = 1; COMB Node = 'stop~10'
+    Info: 1: + IC(0.000 ns) + CELL(2.000 ns) = 2.000 ns; Loc. = PIN_6; Fanout = 64; PIN Node = 'sw[3]'
+    Info: 2: + IC(2.000 ns) + CELL(6.000 ns) = 10.000 ns; Loc. = LC39; Fanout = 1; COMB Node = 'stop~12'
+    Info: 3: + IC(0.000 ns) + CELL(2.000 ns) = 12.000 ns; Loc. = LC40; Fanout = 1; COMB Node = 'stop~11'
     Info: 4: + IC(0.000 ns) + CELL(4.000 ns) = 16.000 ns; Loc. = PIN_28; Fanout = 0; PIN Node = 'stop'
     Info: Total cell delay = 14.000 ns ( 87.50 % )
     Info: Total interconnect delay = 2.000 ns ( 12.50 % )
@@ -463,13 +439,13 @@ Info: th for register "u[1]" (data pin = "ir[6]", clock pin = "t3") is -3.000 ns
         Info: Total cell delay = 3.000 ns ( 100.00 % )
     Info: + Micro hold delay of destination is 4.000 ns
     Info: - Shortest pin to register delay is 10.000 ns
-        Info: 1: + IC(0.000 ns) + CELL(2.000 ns) = 2.000 ns; Loc. = PIN_10; Fanout = 46; PIN Node = 'ir[6]'
+        Info: 1: + IC(0.000 ns) + CELL(2.000 ns) = 2.000 ns; Loc. = PIN_10; Fanout = 18; PIN Node = 'ir[6]'
         Info: 2: + IC(2.000 ns) + CELL(6.000 ns) = 10.000 ns; Loc. = LC41; Fanout = 7; REG Node = 'u[1]'
         Info: Total cell delay = 8.000 ns ( 80.00 % )
         Info: Total interconnect delay = 2.000 ns ( 20.00 % )
 Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 2 warnings
     Info: Peak virtual memory: 154 megabytes
-    Info: Processing ended: Fri Jul 13 12:04:35 2018
+    Info: Processing ended: Fri Jul 13 15:15:06 2018
     Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:00
 

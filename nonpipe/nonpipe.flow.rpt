@@ -1,5 +1,5 @@
 Flow report for nonpipe
-Thu Jul 12 13:01:39 2018
+Fri Jul 13 16:53:49 2018
 Quartus II Version 9.1 Build 222 10/21/2009 SJ Full Version
 
 
@@ -38,7 +38,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------+
 ; Flow Summary                                                       ;
 +-------------------------+------------------------------------------+
-; Flow Status             ; Successful - Thu Jul 12 13:01:39 2018    ;
+; Flow Status             ; Successful - Fri Jul 13 16:53:49 2018    ;
 ; Quartus II Version      ; 9.1 Build 222 10/21/2009 SJ Full Version ;
 ; Revision Name           ; nonpipe                                  ;
 ; Top-level Entity Name   ; nonpipe                                  ;
@@ -46,7 +46,7 @@ applicable agreement for further details.
 ; Device                  ; EPM7128SLC84-15                          ;
 ; Timing Models           ; Final                                    ;
 ; Met timing requirements ; Yes                                      ;
-; Total macrocells        ; 30 / 128 ( 23 % )                        ;
+; Total macrocells        ; 34 / 128 ( 27 % )                        ;
 ; Total pins              ; 45 / 68 ( 66 % )                         ;
 +-------------------------+------------------------------------------+
 
@@ -56,23 +56,24 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 07/12/2018 13:01:34 ;
+; Start date & time ; 07/13/2018 16:53:44 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; nonpipe             ;
 +-------------------+---------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                                       ;
-+------------------------------------+----------------------------------------------------+---------------+-------------+----------------+
-; Assignment Name                    ; Value                                              ; Default Value ; Entity Name ; Section Id     ;
-+------------------------------------+----------------------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID              ; 2200299517014.153137169403496                      ; --            ; --          ; --             ;
-; MAX_CORE_JUNCTION_TEMP             ; 85                                                 ; --            ; --          ; --             ;
-; MIN_CORE_JUNCTION_TEMP             ; 0                                                  ; --            ; --          ; --             ;
-; MISC_FILE                          ; C:/Users/Administrator/Desktop/nonpipe/nonpipe.dpf ; --            ; --          ; --             ;
-; USE_GENERATED_PHYSICAL_CONSTRAINTS ; Off                                                ; --            ; --          ; eda_blast_fpga ;
-+------------------------------------+----------------------------------------------------+---------------+-------------+----------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                                 ;
++------------------------------------+--------------------------------------------------------------+---------------+-------------+----------------+
+; Assignment Name                    ; Value                                                        ; Default Value ; Entity Name ; Section Id     ;
++------------------------------------+--------------------------------------------------------------+---------------+-------------+----------------+
+; COMPILER_SIGNATURE_ID              ; 2200299517014.153147202403908                                ; --            ; --          ; --             ;
+; MAX_CORE_JUNCTION_TEMP             ; 85                                                           ; --            ; --          ; --             ;
+; MIN_CORE_JUNCTION_TEMP             ; 0                                                            ; --            ; --          ; --             ;
+; MISC_FILE                          ; C:/Users/Administrator/Desktop/nonpipe/nonpipe.dpf           ; --            ; --          ; --             ;
+; MISC_FILE                          ; C:/Users/Administrator/Desktop/NewBeeCpu/nonpipe/nonpipe.dpf ; --            ; --          ; --             ;
+; USE_GENERATED_PHYSICAL_CONSTRAINTS ; Off                                                          ; --            ; --          ; eda_blast_fpga ;
++------------------------------------+--------------------------------------------------------------+---------------+-------------+----------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------+
@@ -80,10 +81,10 @@ applicable agreement for further details.
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name             ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis    ; 00:00:01     ; 1.0                     ; 215 MB              ; 00:00:01                           ;
+; Analysis & Synthesis    ; 00:00:01     ; 1.0                     ; 216 MB              ; 00:00:01                           ;
 ; Fitter                  ; 00:00:00     ; 1.0                     ; 167 MB              ; 00:00:01                           ;
-; Assembler               ; 00:00:01     ; 1.0                     ; 168 MB              ; 00:00:00                           ;
-; Classic Timing Analyzer ; 00:00:00     ; 1.0                     ; 142 MB              ; 00:00:01                           ;
+; Assembler               ; 00:00:00     ; 1.0                     ; 168 MB              ; 00:00:00                           ;
+; Classic Timing Analyzer ; 00:00:01     ; 1.0                     ; 142 MB              ; 00:00:01                           ;
 ; Total                   ; 00:00:02     ; --                      ; --                  ; 00:00:03                           ;
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
 

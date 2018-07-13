@@ -17,7 +17,7 @@ Slack          : N/A
 Required Time  : None
 Actual Time    : 18.000 ns
 From           : u[2]
-To             : drw
+To             : stop
 From Clock     : t3
 To Clock       : --
 Failed Paths   : 0
@@ -27,7 +27,7 @@ Slack          : N/A
 Required Time  : None
 Actual Time    : 16.000 ns
 From           : ir[6]
-To             : drw
+To             : stop
 From Clock     : --
 To Clock       : --
 Failed Paths   : 0

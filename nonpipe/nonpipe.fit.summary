@@ -1,9 +1,9 @@
-Fitter Status : Successful - Thu Jul 12 13:01:36 2018
+Fitter Status : Successful - Fri Jul 13 16:53:46 2018
 Quartus II Version : 9.1 Build 222 10/21/2009 SJ Full Version
 Revision Name : nonpipe
 Top-level Entity Name : nonpipe
 Family : MAX7000S
 Device : EPM7128SLC84-15
 Timing Models : Final
-Total macrocells : 30 / 128 ( 23 % )
+Total macrocells : 34 / 128 ( 27 % )
 Total pins : 45 / 68 ( 66 % )
