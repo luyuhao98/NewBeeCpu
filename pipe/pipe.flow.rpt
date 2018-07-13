@@ -1,5 +1,5 @@
 Flow report for pipe
-Thu Jul 12 16:54:40 2018
+Fri Jul 13 12:04:35 2018
 Quartus II Version 9.1 Build 222 10/21/2009 SJ Full Version
 
 
@@ -38,7 +38,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------+
 ; Flow Summary                                                       ;
 +-------------------------+------------------------------------------+
-; Flow Status             ; Successful - Thu Jul 12 16:54:40 2018    ;
+; Flow Status             ; Successful - Fri Jul 13 12:04:35 2018    ;
 ; Quartus II Version      ; 9.1 Build 222 10/21/2009 SJ Full Version ;
 ; Revision Name           ; pipe                                     ;
 ; Top-level Entity Name   ; pipe                                     ;
@@ -46,7 +46,7 @@ applicable agreement for further details.
 ; Device                  ; EPM7128SLC84-15                          ;
 ; Timing Models           ; Final                                    ;
 ; Met timing requirements ; Yes                                      ;
-; Total macrocells        ; 34 / 128 ( 27 % )                        ;
+; Total macrocells        ; 33 / 128 ( 26 % )                        ;
 ; Total pins              ; 45 / 68 ( 66 % )                         ;
 +-------------------------+------------------------------------------+
 
@@ -56,7 +56,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 07/12/2018 16:54:36 ;
+; Start date & time ; 07/13/2018 12:04:31 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; pipe                ;
 +-------------------+---------------------+
@@ -67,7 +67,7 @@ applicable agreement for further details.
 +------------------------------------+--------------------------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                    ; Value                                                  ; Default Value ; Entity Name ; Section Id     ;
 +------------------------------------+--------------------------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID              ; 2200299517014.153138567605132                          ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID              ; 2200299517014.153145467102736                          ; --            ; --          ; --             ;
 ; MAX_CORE_JUNCTION_TEMP             ; 85                                                     ; --            ; --          ; --             ;
 ; MIN_CORE_JUNCTION_TEMP             ; 0                                                      ; --            ; --          ; --             ;
 ; MISC_FILE                          ; C:/Users/Administrator/Desktop/NewBeeCpu/pipe/pipe.dpf ; --            ; --          ; --             ;

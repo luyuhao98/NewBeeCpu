@@ -16,7 +16,7 @@ Type           : Worst-case tco
 Slack          : N/A
 Required Time  : None
 Actual Time    : 18.000 ns
-From           : v[2]
+From           : u[2]
 To             : drw
 From Clock     : t3
 To Clock       : --
@@ -45,9 +45,9 @@ Failed Paths   : 0
 Type           : Clock Setup: 't3'
 Slack          : N/A
 Required Time  : None
-Actual Time    : 38.46 MHz ( period = 26.000 ns )
-From           : v[2]
-To             : v[1]
+Actual Time    : 76.92 MHz ( period = 13.000 ns )
+From           : u[1]
+To             : u[3]
 From Clock     : t3
 To Clock       : t3
 Failed Paths   : 0

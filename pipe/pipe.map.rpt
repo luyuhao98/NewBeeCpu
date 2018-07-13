@@ -1,5 +1,5 @@
 Analysis & Synthesis report for pipe
-Thu Jul 12 16:54:37 2018
+Fri Jul 13 12:04:32 2018
 Quartus II Version 9.1 Build 222 10/21/2009 SJ Full Version
 
 
@@ -39,12 +39,12 @@ applicable agreement for further details.
 +------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                           ;
 +-----------------------------+------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Thu Jul 12 16:54:37 2018    ;
+; Analysis & Synthesis Status ; Successful - Fri Jul 13 12:04:32 2018    ;
 ; Quartus II Version          ; 9.1 Build 222 10/21/2009 SJ Full Version ;
 ; Revision Name               ; pipe                                     ;
 ; Top-level Entity Name       ; pipe                                     ;
 ; Family                      ; MAX7000S                                 ;
-; Total macrocells            ; 34                                       ;
+; Total macrocells            ; 33                                       ;
 ; Total pins                  ; 41                                       ;
 +-----------------------------+------------------------------------------+
 
@@ -139,14 +139,14 @@ applicable agreement for further details.
 +----------------------+----------------------+
 ; Resource             ; Usage                ;
 +----------------------+----------------------+
-; Logic cells          ; 34                   ;
-; Total registers      ; 5                    ;
+; Logic cells          ; 33                   ;
+; Total registers      ; 4                    ;
 ; I/O pins             ; 41                   ;
 ; Parallel expanders   ; 2                    ;
 ; Maximum fan-out node ; sw[1]                ;
 ; Maximum fan-out      ; 29                   ;
-; Total fan-out        ; 278                  ;
-; Average fan-out      ; 3.71                 ;
+; Total fan-out        ; 276                  ;
+; Average fan-out      ; 3.73                 ;
 +----------------------+----------------------+
 
 
@@ -155,7 +155,7 @@ applicable agreement for further details.
 +----------------------------+------------+------+---------------------+--------------+
 ; Compilation Hierarchy Node ; Macrocells ; Pins ; Full Hierarchy Name ; Library Name ;
 +----------------------------+------------+------+---------------------+--------------+
-; |pipe                      ; 34         ; 41   ; |pipe               ; work         ;
+; |pipe                      ; 33         ; 41   ; |pipe               ; work         ;
 +----------------------------+------------+------+---------------------+--------------+
 
 
@@ -165,7 +165,7 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 9.1 Build 222 10/21/2009 SJ Full Version
-    Info: Processing started: Thu Jul 12 16:54:36 2018
+    Info: Processing started: Fri Jul 13 12:04:31 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off pipe -c pipe
 Info: Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info: Found 2 design units, including 1 entities, in source file pipe.vhd
@@ -173,8 +173,8 @@ Info: Found 2 design units, including 1 entities, in source file pipe.vhd
     Info: Found entity 1: pipe
 Info: Elaborating entity "pipe" for the top level hierarchy
 Warning (10541): VHDL Signal Declaration warning at pipe.vhd(10): used implicit default value for signal "long" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10492): VHDL Process Statement warning at pipe.vhd(43): signal "t3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at pipe.vhd(47): signal "t3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at pipe.vhd(46): signal "t3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at pipe.vhd(52): signal "t3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Info: Registers with preset signals will power-up high
 Warning: Output pins are stuck at VCC or GND
     Warning (13410): Pin "long" is stuck at GND
@@ -183,13 +183,13 @@ Info: Promoted pin-driven signal(s) to global signal
     Info: Promoted clock signal driven by pin "t3" to global clock signal
 Warning: Design contains 1 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "w[3]"
-Info: Implemented 75 device resources after synthesis - the final resource count might be different
+Info: Implemented 74 device resources after synthesis - the final resource count might be different
     Info: Implemented 14 input pins
     Info: Implemented 27 output pins
-    Info: Implemented 34 macrocells
+    Info: Implemented 33 macrocells
 Info: Quartus II Analysis & Synthesis was successful. 0 errors, 7 warnings
     Info: Peak virtual memory: 215 megabytes
-    Info: Processing ended: Thu Jul 12 16:54:37 2018
+    Info: Processing ended: Fri Jul 13 12:04:32 2018
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 

@@ -1,9 +1,9 @@
 |pipe
 clr => process_0.IN0
 t3 => process_0.IN0
-t3 => opt.CLK
-t3 => v[2].CLK
-t3 => v[3].CLK
+t3 => u[1].CLK
+t3 => u[2].CLK
+t3 => u[3].CLK
 c => pcadd.IN0
 z => pcadd.IN0
 sw[1] => Equal0.IN5

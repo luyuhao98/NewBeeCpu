@@ -13,7 +13,7 @@ port (
 end pipe ;
 
 architecture art of pipe is
-	signal wreg,rreg,wram,rram,fi,add,sub,aand,inc,ld,st,jc,jz,jmp,stp,st0,opt:std_logic;
+	signal wreg,rreg,wram,rram,fi,add,sub,aand,inc,ld,st,jc,jz,jmp,stp,st0:std_logic;
 	signal v:std_logic_vector(3 downto 1);
 	
 begin
@@ -33,23 +33,29 @@ begin
 	jmp <= '1' when ir = "1001" else '0';
 	stp <= '1' when ir = "1110" else '0';
 	
-	process(st0,clr,w)
+	process(clr,w)
+	variable u:std_logic_vector(3 downto 1);
+	variable opt:std_logic;
 	begin
 		if(clr = '0')then
 			st0  <= '0';
 			v(1) <= '1';
 			v(2) <= '0';
 			v(3) <= '0';
+			u :="100";
 		elsif (rising_edge(t3))then
-			opt <= ld or st;
-			v(3) <= opt and v(2);
-			v(2) <= v(1);
+			opt := ld or st or jmp;
+			u(3) := (ld or st or jmp) and (not u(1));
+			u(2) := u(1) ;
+			u(1) := (opt and u(3)) or((not opt) and u(2));
+		
 		elsif(falling_edge(t3))then
 			if (w(2) = '1' and wreg = '1') or (w(1)='1' and st0 = '0' and (rram = '1' or wram = '1' or fi = '1'))then
 				st0 <= not st0;
 			end if;
-			v(1) <= (opt and v(3))or(not opt) and v(2);
+			
 		end if;
+		v <= u;
 	end process;
    
    ldz<=((add and v(2)) or (sub and v(2)) or (aand and v(2)) or (inc and v(2))) and fi and st0;
