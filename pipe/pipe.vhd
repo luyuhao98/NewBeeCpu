@@ -45,9 +45,6 @@ begin
 	begin
 		if(clr = '0')then
 			st0  <= '0';
-			v(1) <= '1';
-			v(2) <= '0';
-			v(3) <= '0';
 			u :="001";
 		elsif (rising_edge(t3))then
 			opt := ld or st or jmp;
