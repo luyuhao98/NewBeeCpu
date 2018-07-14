@@ -1,5 +1,5 @@
 Analysis & Synthesis report for pipe
-Fri Jul 13 15:15:01 2018
+Sat Jul 14 16:32:38 2018
 Quartus II Version 9.1 Build 222 10/21/2009 SJ Full Version
 
 
@@ -39,12 +39,12 @@ applicable agreement for further details.
 +------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                           ;
 +-----------------------------+------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Fri Jul 13 15:15:01 2018    ;
+; Analysis & Synthesis Status ; Successful - Sat Jul 14 16:32:38 2018    ;
 ; Quartus II Version          ; 9.1 Build 222 10/21/2009 SJ Full Version ;
 ; Revision Name               ; pipe                                     ;
 ; Top-level Entity Name       ; pipe                                     ;
 ; Family                      ; MAX7000S                                 ;
-; Total macrocells            ; 32                                       ;
+; Total macrocells            ; 37                                       ;
 ; Total pins                  ; 41                                       ;
 +-----------------------------+------------------------------------------+
 
@@ -139,14 +139,14 @@ applicable agreement for further details.
 +----------------------+----------------------+
 ; Resource             ; Usage                ;
 +----------------------+----------------------+
-; Logic cells          ; 32                   ;
+; Logic cells          ; 37                   ;
 ; Total registers      ; 4                    ;
 ; I/O pins             ; 41                   ;
-; Parallel expanders   ; 1                    ;
+; Parallel expanders   ; 6                    ;
 ; Maximum fan-out node ; sw[1]                ;
-; Maximum fan-out      ; 28                   ;
-; Total fan-out        ; 243                  ;
-; Average fan-out      ; 3.33                 ;
+; Maximum fan-out      ; 33                   ;
+; Total fan-out        ; 319                  ;
+; Average fan-out      ; 4.09                 ;
 +----------------------+----------------------+
 
 
@@ -155,7 +155,7 @@ applicable agreement for further details.
 +----------------------------+------------+------+---------------------+--------------+
 ; Compilation Hierarchy Node ; Macrocells ; Pins ; Full Hierarchy Name ; Library Name ;
 +----------------------------+------------+------+---------------------+--------------+
-; |pipe                      ; 32         ; 41   ; |pipe               ; work         ;
+; |pipe                      ; 37         ; 41   ; |pipe               ; work         ;
 +----------------------------+------------+------+---------------------+--------------+
 
 
@@ -165,7 +165,7 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 9.1 Build 222 10/21/2009 SJ Full Version
-    Info: Processing started: Fri Jul 13 15:15:00 2018
+    Info: Processing started: Sat Jul 14 16:32:37 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off pipe -c pipe
 Info: Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info: Found 2 design units, including 1 entities, in source file pipe.vhd
@@ -173,27 +173,22 @@ Info: Found 2 design units, including 1 entities, in source file pipe.vhd
     Info: Found entity 1: pipe
 Info: Elaborating entity "pipe" for the top level hierarchy
 Warning (10541): VHDL Signal Declaration warning at pipe.vhd(10): used implicit default value for signal "long" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at pipe.vhd(16): used implicit default value for signal "dec" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at pipe.vhd(16): used implicit default value for signal "xxor" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at pipe.vhd(16): used implicit default value for signal "cmp" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at pipe.vhd(16): used implicit default value for signal "mov" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at pipe.vhd(16): used implicit default value for signal "cla" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at pipe.vhd(16): used implicit default value for signal "oout" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10492): VHDL Process Statement warning at pipe.vhd(46): signal "t3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at pipe.vhd(52): signal "t3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at pipe.vhd(49): signal "t3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Info: Registers with preset signals will power-up high
 Warning: Output pins are stuck at VCC or GND
     Warning (13410): Pin "long" is stuck at GND
 Info: Promoted pin-driven signal(s) to global signal
     Info: Promoted clear signal driven by pin "clr" to global clear signal
     Info: Promoted clock signal driven by pin "t3" to global clock signal
-Info: Implemented 73 device resources after synthesis - the final resource count might be different
+Warning: Design contains 1 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "w[3]"
+Info: Implemented 78 device resources after synthesis - the final resource count might be different
     Info: Implemented 14 input pins
     Info: Implemented 27 output pins
-    Info: Implemented 32 macrocells
-Info: Quartus II Analysis & Synthesis was successful. 0 errors, 11 warnings
+    Info: Implemented 37 macrocells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 6 warnings
     Info: Peak virtual memory: 215 megabytes
-    Info: Processing ended: Fri Jul 13 15:15:01 2018
+    Info: Processing ended: Sat Jul 14 16:32:38 2018
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 

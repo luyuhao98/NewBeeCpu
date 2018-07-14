@@ -46,17 +46,15 @@ begin
 		if(clr = '0')then
 			st0  <= '0';
 			u :="001";
-		elsif (rising_edge(t3))then
-			opt := ld or st or jmp;
-			u(3) := (ld or st or jmp) and (not u(1));
-			u(2) := u(1) ;
-			u(1) := (opt and u(3)) or((not opt) and u(2));
-		
 		elsif(falling_edge(t3))then
 			if (w(2) = '1' and wreg = '1') or (w(1)='1' and st0 = '0' and (rram = '1' or wram = '1' or fi = '1'))then
 				st0 <= not st0;
 			end if;
-			
+			opt := ld or st or jmp or (jc and c ) or (jz and z) or cmp or stp;
+			u(3) := opt and (not u(1));
+			u(2) := u(1) ;
+			u(1) := (opt and u(3)) or((not opt) and u(2));
+		
 		end if;
 		v <= u;
 	end process;
@@ -81,7 +79,7 @@ begin
    stop<=(stp and v(2) and fi and st0) or ((wreg or rreg or rram or wram) and (w(1) or w(2)))or(fi and (not st0) and w(1));
    lir<= v(1) and fi and st0;
    sbus<=(wreg and (w(1) or w(2))) or (rram and (not st0) and w(1)) or (wram and w(1))or(fi and (not st0) and w(1));
-   mbus<=(ld and w(3) and fi and st0) or (rram and st0 and w(1));
+   mbus<=(ld and v(3) and fi and st0) or (rram and st0 and w(1));
    short <=(rram or wram or (fi and (not st0))) and w(1);
    sel(0)<=(wreg and w(1)) or (rreg and (w(1) or w(2)));
    sel(1)<=(wreg and (not st0) and w(1)) or (wreg and st0 and w(2)) or (rreg and w(2));
